@@ -19,7 +19,6 @@ class ResultActivity : AppCompatActivity() {
         try {
             backgroundScreen.setBackgroundColor(Color.parseColor("#$colorCode"))
         } catch (ex: IllegalArgumentException) {
-            // ✅ kirim balik error ke MainActivity
             Intent().let { errorIntent ->
                 errorIntent.putExtra(MainActivity.ERROR_KEY, true)
                 setResult(Activity.RESULT_OK, errorIntent)

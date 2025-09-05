@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity() {
     private val startForResult = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ) { activityResult ->
-        // ✅ cek resultCode dulu
         if (activityResult.resultCode == Activity.RESULT_OK) {
             val data = activityResult.data
             val error = data?.getBooleanExtra(ERROR_KEY, false)
